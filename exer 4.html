@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let phno = document.getElementById("phno").value;
+            let mail = document.getElementById("mail").value;
+            let doorno = document.getElementById("doorno").value;
+            let stname = document.getElementById("stname").value;
+            let city = document.getElementById("city").value;
+            let pin = document.getElementById("pin").value;
+            
+            let phonePattern = /^[0-9]{10}$/;
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (name == "" || phno == "" || mail == "" || doorno == "" || stname == "" || city == "" || pin == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            if (!phonePattern.test(phno)) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+            if (!emailPattern.test(mail)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body style="font-size: 25px;">
+    
+    <h1 style="text-align: center;">FLOWERS ORDER FORM</h1>
+    <form onsubmit="return validateForm()">
+        <h3>PERSONAL DETAILS</h3>
+        <label for="name">NAME:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="phno">PHONE NO:</label><br>
+        <input type="text" id="phno" name="phno"><br>
+        <label for="mail">MAIL ID:</label><br>
+        <input type="text" id="mail" name="mail"><br>
+
+        <h3>BOUQUET DETAILS</h3>
+        <label for="bouquetsize">BOUQUET SIZE:</label><br>
+        <input type="checkbox" id="size1" name="size1" value="Large">
+        <label for="size1">Large</label><br>
+        <input type="checkbox" id="size2" name="size2" value="Medium">
+        <label for="size2">Medium</label><br>
+        <input type="checkbox" id="size3" name="size3" value="Small">
+        <label for="size3">Small</label><br><br>
+
+        <label for="flower">FLOWER TYPE:</label><br>
+        <input type="checkbox" id="flo1" name="flo1" value="Rose">
+        <label for="flo1">Red Roses</label><br>
+        <input type="checkbox" id="flo2" name="flo2" value="sunflower">
+        <label for="flo2">Sun Flower</label><br>
+        <input type="checkbox" id="flo3" name="flo3" value="anemone">
+        <label for="flo3">Anemone</label><br>
+        <input type="checkbox" id="flo4" name="flo4" value="ranunculus">
+        <label for="flo4">Ranunculus</label><br>
+        <input type="checkbox" id="flo5" name="flo5" value="mixed">
+        <label for="flo5">Mixed Flowers</label><br><br>
+
+        <label for="colpref">COLOUR PREFERENCE:</label><br>
+        <input type="checkbox" id="cp1" name="cp1" value="bw">
+        <label for="cp1">Burylwood</label><br>
+        <input type="checkbox" id="cp2" name="cp2" value="pg">
+        <label for="cp2">PaleGreen</label><br>
+        <input type="checkbox" id="cp3" name="cp3" value="lv">
+        <label for="cp3">Lavender</label><br>
+        <input type="checkbox" id="cp4" name="cp4" value="zw">
+        <label for="cp4">Zinwaldite</label><br>
+        <label for="others">Specifications:</label><br>
+        <input type="text" id="others" name="others"><br><br>
+
+        <label for="occtype">OCCASION TYPE:</label><br>
+        <input type="checkbox" id="ot1" name="ot1" value="mar">
+        <label for="ot1">Marriage</label><br>
+        <input type="checkbox" id="ot2" name="ot2" value="ann">
+        <label for="ot2">Anniversary</label><br>
+        <input type="checkbox" id="ot3" name="ot3" value="bday">
+        <label for="ot3">BirthDay</label><br>
+        <input type="checkbox" id="ot4" name="ot4" value="gws">
+        <label for="ot4">Get Well Soon</label><br>
+
+        <h3>DELIVERY ADDRESS DETAILS</h3>
+        <label for="doorno">DOOR NO:</label><br>
+        <input type="text" id="doorno" name="doorno"><br>
+        <label for="stname">STREET NAME:</label><br>
+        <input type="text" id="stname" name="stname"><br>
+        <label for="city">CITY:</label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="pin">PINCODE:</label><br>
+        <input type="text" id="pin" name="pin"><br><br>
+        
+        <footer style="text-align: center;">
+        <input type="submit" value="Submit" class="button-border">
+        </footer>
+
+    </form>
+</body>
+</html>

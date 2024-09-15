@@ -1,0 +1,12 @@
+body{
+    background-image: url("floral.png");
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.button-border {
+    border: 10px solid rgb(143, 99, 67);
+    font-size: 25px;
+}
+
