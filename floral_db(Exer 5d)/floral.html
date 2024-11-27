@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Database</title>
+</head>
+<body>
+    <h1>Flower Database</h1>
+    <hr>    
+
+    <!-- Link to display all flowers -->
+    <a href="http://localhost:8080/floral_db/FlowerDatabaseServlet3">Display all flowers</a>
+    <hr>
+
+    <!-- Form to view department-specific flowers -->
+    <h3>View Flower Details by Department</h3>
+    <form action="http://localhost:8080/floral_db/FlowerDatabaseServlet2" method="get">
+        <!-- Drop down selection -->
+        <label for="flower">Flower</label>
+        <select id="flower" name="flower">
+            <option value="empty">--</option>
+            <option value="Rose">Rose</option>
+            <option value="Tulip">Tulip</option>
+            <option value="Lily">Lily</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    <hr>
+
+    <!-- Form to insert data into the database -->
+    <h2>Insert Flower Data into DB</h2>
+    <form action="http://localhost:8080/floral_db/FlowerDatabaseServlet3" method="post">
+        <p>Flower ID:</p> 
+        <input type="text" name="flowerid" required/>
+        <p>Flower Name:</p> 
+        <input type="text" name="flowername" required/>
+        <p>Petal Count:</p> 
+        <input type="number" name="petalcount" required/>
+        <br/><br/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
